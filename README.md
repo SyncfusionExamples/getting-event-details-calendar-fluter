@@ -106,4 +106,10 @@ void calendarTapped(CalendarTapDetails details) {
   }
 }
 ```
-KB link: https://www.syncfusion.com/kb/10999/how-to-get-appointment-details-from-the-ontap-event-of-the-flutter-event-calendar
+**[View document in Syncfusion Flutter Knowledge base](https://www.syncfusion.com/kb/10999/how-to-get-appointment-details-from-the-ontap-event-of-the-flutter-event-calendar)**
+
+**Screenshots**
+
+![Agenda appointment details](http://www.syncfusion.com/uploads/user/kb/flut/flut-669/flut-669_img2.jpeg)
+![All day appointment details](http://www.syncfusion.com/uploads/user/kb/flut/flut-669/flut-669_img3.jpeg)
+![Appointment details](http://www.syncfusion.com/uploads/user/kb/flut/flut-669/flut-669_img4.jpeg)
