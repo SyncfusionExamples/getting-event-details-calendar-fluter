@@ -110,6 +110,6 @@ void calendarTapped(CalendarTapDetails details) {
 
 **Screenshots**
 
-<img alt="Agenda appointment details"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-669/flut-669_img2.jpeg" width="250" height="400" />|
-<img alt="All day appointment details"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-669/flut-669_img3.jpeg" width="250" height="400" />|
-<img alt="Appointment details"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-669/flut-669_img4.jpeg" width="250" height="400" />|
+<img alt="Agenda appointment details"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-669/flut-669_img2.jpeg" width="250" height="500" />|
+<img alt="All day appointment details"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-669/flut-669_img3.jpeg" width="250" height="500" />|
+<img alt="Appointment details"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-669/flut-669_img4.jpeg" width="250" height="500" />|
