@@ -39,14 +39,14 @@ List<String> views = <String>[
 ];
 
 class ScheduleExample extends State<TapAppointmentDetails> {
-  CalendarView _calendarView;
-  String _subjectText, _startTimeText, _endTimeText,
-         _dateText, _timeDetails;
-  Color headerColor, viewHeaderColor, calendarColor, defaultColor;
+  CalendarView _calendarView=CalendarView.week;
+  String? _subjectText, _startTimeText, _endTimeText,
+      _dateText, _timeDetails;
+  Color? headerColor, viewHeaderColor, calendarColor, defaultColor;
 
   @override
   void initState() {
-    _calendarView = CalendarView.week;
+
     _subjectText = '';
     _startTimeText = '';
     _endTimeText = '';
@@ -136,7 +136,7 @@ class ScheduleExample extends State<TapAppointmentDetails> {
             Expanded(
               child: SfCalendar(
                 viewHeaderStyle:
-                    ViewHeaderStyle(backgroundColor: viewHeaderColor),
+                ViewHeaderStyle(backgroundColor: viewHeaderColor),
                 backgroundColor: calendarColor,
                 view: _calendarView,
                 monthViewSettings: MonthViewSettings(showAgenda: true),
@@ -153,7 +153,7 @@ class ScheduleExample extends State<TapAppointmentDetails> {
   void calendarTapped(CalendarTapDetails details) {
     if (details.targetElement == CalendarElement.appointment ||
         details.targetElement == CalendarElement.agenda) {
-      final Appointment appointmentDetails = details.appointments[0];
+      final Appointment appointmentDetails = details.appointments![0];
       _subjectText = appointmentDetails.subject;
       _dateText = DateFormat('MMMM dd, yyyy')
           .format(appointmentDetails.startTime)
@@ -194,7 +194,7 @@ class ScheduleExample extends State<TapAppointmentDetails> {
                     ),
                     Row(
                       children: <Widget>[
-                        Text(_timeDetails,
+                        Text(_timeDetails!,
                             style: TextStyle(
                                 fontWeight: FontWeight.w400, fontSize: 15)),
                       ],
