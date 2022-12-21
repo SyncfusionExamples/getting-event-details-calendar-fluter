@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-void main() => runApp(AppointmentDetails());
+void main() => runApp(const AppointmentDetails());
 
 class AppointmentDetails extends StatelessWidget {
+  const AppointmentDetails({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,6 +17,8 @@ class AppointmentDetails extends StatelessWidget {
 }
 
 class TapAppointmentDetails extends StatefulWidget {
+  const TapAppointmentDetails({super.key});
+
   @override
   State<StatefulWidget> createState() => ScheduleExample();
 }
@@ -44,7 +47,7 @@ class ScheduleExample extends State<TapAppointmentDetails> {
           appBar: AppBar(
             actions: <Widget>[
               PopupMenuButton<String>(
-                icon: Icon(Icons.color_lens),
+                icon: const Icon(Icons.color_lens),
                 itemBuilder: (BuildContext context) {
                   return colors.map((String choice) {
                     return PopupMenuItem<String>(
@@ -85,10 +88,10 @@ class ScheduleExample extends State<TapAppointmentDetails> {
           body: SafeArea(
             child: SfCalendar(
               viewHeaderStyle:
-                  ViewHeaderStyle(backgroundColor: _viewHeaderColor),
+              ViewHeaderStyle(backgroundColor: _viewHeaderColor),
               backgroundColor: _calendarColor,
               view: CalendarView.week,
-              allowedViews: [
+              allowedViews: const [
                 CalendarView.day,
                 CalendarView.week,
                 CalendarView.workWeek,
@@ -97,7 +100,7 @@ class ScheduleExample extends State<TapAppointmentDetails> {
                 CalendarView.timelineWeek,
                 CalendarView.timelineWorkWeek,
               ],
-              monthViewSettings: MonthViewSettings(showAgenda: true),
+              monthViewSettings: const MonthViewSettings(showAgenda: true),
               dataSource: getCalendarDataSource(),
               onTap: calendarTapped,
             ),
@@ -126,7 +129,7 @@ class ScheduleExample extends State<TapAppointmentDetails> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Container(child: new Text('$_subjectText')),
+              title: Container(child: Text('$_subjectText')),
               content: Container(
                 height: 80,
                 child: Column(
@@ -135,7 +138,7 @@ class ScheduleExample extends State<TapAppointmentDetails> {
                       children: <Widget>[
                         Text(
                           '$_dateText',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 20,
                           ),
@@ -143,14 +146,14 @@ class ScheduleExample extends State<TapAppointmentDetails> {
                       ],
                     ),
                     Row(
-                      children: <Widget>[
+                      children: const <Widget>[
                         Text(''),
                       ],
                     ),
                     Row(
                       children: <Widget>[
                         Text(_timeDetails!,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontWeight: FontWeight.w400, fontSize: 15)),
                       ],
                     )
@@ -158,11 +161,11 @@ class ScheduleExample extends State<TapAppointmentDetails> {
                 ),
               ),
               actions: <Widget>[
-                new FlatButton(
+                TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
-                    child: new Text('close'))
+                    child: const Text('close'))
               ],
             );
           });
